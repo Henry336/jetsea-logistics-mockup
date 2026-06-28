@@ -23,7 +23,7 @@ export default function About() {
             }}
           >
             <Image
-              src="/images/about-warehouse.jpg"
+              src="/about-warehouse.jpg"
               alt="Team and warehouse operations"
               fill
               className="object-cover"
