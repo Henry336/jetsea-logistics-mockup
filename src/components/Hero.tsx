@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section className="relative bg-navy-900 text-white overflow-hidden">
@@ -94,28 +96,24 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right column — hero image placeholder */}
+          {/* Right column — hero image */}
           <div className="relative hidden lg:block">
             <div
               className="relative rounded-[14px] overflow-hidden border border-white/12 aspect-[4/4.6] flex items-end"
               style={{
                 boxShadow: "0 30px 80px rgba(0,0,0,0.45)",
-                background:
-                  "repeating-linear-gradient(135deg,#0c3a44,#0c3a44 12px,#114652 12px,#114652 24px)",
               }}
             >
-              {/* Placeholder label */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="font-mono text-[12.5px] text-slate-dimmer tracking-[0.08em] text-center px-6">
-                  [ HERO PHOTO ]
-                  <br />
-                  port / air cargo operations
-                </span>
-              </div>
+              <Image
+                src="/hero-cargo.jpg"
+                alt="Port and air cargo operations"
+                fill
+                className="object-cover"
+              />
 
               {/* Shipment status card */}
               <div
-                className="relative m-[18px] p-4 rounded-[10px] border border-white/12"
+                className="relative m-[18px] p-4 rounded-[10px] border border-white/12 z-10"
                 style={{
                   background: "rgba(6,49,59,0.82)",
                   backdropFilter: "blur(8px)",
