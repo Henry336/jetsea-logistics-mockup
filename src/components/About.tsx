@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const bullets = [
   "Timely shipment information",
   "Diversified routing options",
@@ -15,16 +17,17 @@ export default function About() {
         {/* Image column */}
         <div className="relative">
           <div
-            className="rounded-[14px] overflow-hidden border border-slate-border flex items-center justify-center"
+            className="rounded-[14px] overflow-hidden border border-slate-border"
             style={{
               aspectRatio: "5/5.4",
-              background:
-                "repeating-linear-gradient(135deg,#eef5f4,#eef5f4 12px,#e3efed 12px,#e3efed 24px)",
             }}
           >
-            <span className="font-mono text-[12.5px] text-[#83A09C] tracking-[0.08em] text-center">
-              [ TEAM / WAREHOUSE PHOTO ]
-            </span>
+            <Image
+              src="/images/about-warehouse.jpg"
+              alt="Team and warehouse operations"
+              fill
+              className="object-cover"
+            />
           </div>
 
           {/* 1994 badge */}
